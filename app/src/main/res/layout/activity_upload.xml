@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.fileupload.UploadActivity">
+<Button
+    android:id="@+id/upload_btt"
+    android:text="upload"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:elevation="4dp"
+        android:id="@+id/progressBarView"
+        android:visibility="gone"
+        android:background="#2a000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            app:contentPaddingLeft="@dimen/padding_normal"
+            app:contentPaddingTop="@dimen/padding_dialog"
+            app:contentPaddingRight="@dimen/padding_dialog"
+            app:contentPaddingBottom="@dimen/padding_normal"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                    android:text="95%"
+                android:id="@+id/txtPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textSize="30dp" />
+
+            <ProgressBar
+                android:layout_gravity="bottom"
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone"/>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+</FrameLayout>
